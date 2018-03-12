@@ -1,0 +1,26 @@
+.movie_card {
+   
+    margin:auto;
+    background-color: white; 
+    width:200px;
+}
+
+.movie_card img {
+    width:100%;
+}
+
+.card_info h3 {
+    padding-left:5px;
+    padding-top:5px;
+    width:80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+}
+.card_info {
+    height:90px;
+    overflow: hidden;
+}
+.card_info p {
+    
+}
