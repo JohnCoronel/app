@@ -19,6 +19,7 @@
     width:100%;
     margin:0 auto;
     justify-content: space-between;
+    background-color: #fafafa;
 }
 
 .navbar ul {
@@ -32,6 +33,7 @@
 .navbar h1 {
     font-family: 'Righteous',cursive;
     margin-left:2rem;
+   
 }
 .navbar::before {
     content: '';
@@ -44,8 +46,9 @@
 
 .footer{
     grid-area: footer;
+    background-color: #fafafa;
 }
 .content{
     grid-area:content;
-    background-color:darkgray;
+    background-color : #fafafa;
 }

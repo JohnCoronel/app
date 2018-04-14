@@ -7,6 +7,7 @@ import Movie from './movie';
 import Footer from './Footer';
 import './style/normalize.css';
 import './style/app.css';
+import './style/search.css';
 
 
 
