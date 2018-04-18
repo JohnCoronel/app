@@ -1,15 +1,17 @@
 import React from 'react';
 import "./style/app.css";
 import MovieCard from './card';
+import MovieCardFix from './MovieCard';
 
 
 const Movie = ({match}) => (
     <div className = "content">
-        This is the page for the {match.params.id}
-        <div style = {{display:'flex'}}>
+
+        <div>
         <MovieCard />
-        <MovieCard/>
-           d</div>
+        <MovieCardFix/>
+        
+           </div>
         </div>
     
 

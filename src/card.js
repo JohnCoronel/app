@@ -44,13 +44,11 @@ class MovieCard extends React.Component {
                 <div className ={content}>
                     <div className = "content--header">
                     <div className = "content--header-top">
-                    <h3> Mad Max Fury Road 
-
-                          </h3>
-                    <div  onClick = {this.showContent} className={chevronClass}><ChevronIcon/></div>
+                    <h3> Mad Max Fury Road  </h3>
+                    
                     </div>
                 
-                    <h5> Action | Sci-Fi ‧ 2hr 15m ‧ 2015  </h5>
+                    <h5> Action ‧ 2hr 15m ‧ 2015  </h5>
                     </div>
                     <div className ={bodyClass}>
                      "Lorem ipsum dolsed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -58,12 +56,15 @@ class MovieCard extends React.Component {
                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu."
                     
                     </div>
+                    
                     </div>
+                    <div  onClick = {this.showContent} className={chevronClass}><ChevronIcon/></div>
                     <div className = "content--footer">
-                    <AddIcon/>
+                    
                     <LikeIcon/>
                     <ShareIcon/>
                     <ReviewIcon/>
+                    <AddIcon/>
                     </div>
                 </div>
 
