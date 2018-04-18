@@ -7,7 +7,7 @@ import './style/app.css';
 const Header = () => (
     <div className = "navbar">
     
-    <h1> Quetzalcoatl </h1>
+    <h1>Quetzalcoatl </h1>
         <SearchBar/>
         <ul className = "nav">
              <NotificationIcon/>

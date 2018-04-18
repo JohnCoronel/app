@@ -1,15 +1,15 @@
 import React from 'react';
 import "./style/app.css";
-import MovieCard from './card';
-import MovieCardFix from './MovieCard';
+
+import MovieCard from './MovieCard';
 
 
 const Movie = ({match}) => (
     <div className = "content">
 
         <div>
-        <MovieCard />
-        <MovieCardFix/>
+      
+        <MovieCard/>
         
            </div>
         </div>

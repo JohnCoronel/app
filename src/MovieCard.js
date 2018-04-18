@@ -8,7 +8,7 @@ import ReviewIcon from "./components/ReviewIcon";
 import ChevronIcon from "./components/ChevronIcon";
 import './moviecard.css';
 
-export default class MovieCardFix extends React.Component {
+export default class MovieCard extends React.Component {
     constructor(){
         super()
         this.state = {
