@@ -2,10 +2,14 @@ import React from 'react';
 import ClassNames from 'classnames';
 
 import AddIcon from  "./components/AddIcon";
+import GenreIcon from './components/GenreIcon'
 import LikeIcon from "./components/LikeIcon";
 import ShareIcon from "./components/ShareIcon";
 import ReviewIcon from "./components/ReviewIcon";
 import ChevronIcon from "./components/ChevronIcon";
+import TimeIcon from "./components/TimeIcon";
+import CalendarIcon from "./components/CalendarIcon"
+
 import './moviecard.css';
 
 export default class MovieCard extends React.Component {
@@ -35,6 +39,11 @@ showContent = () => {
             "movie-card__content__btn":true,
             "movie-card__content__btn--active":this.state.expanded
         })
+        const content = ClassNames({
+            'movie-card__content__body':true,
+            'movie-card__content__body--active':this.state.expanded
+        })
+
 
         return(
             <div className = "movie-card">
@@ -43,8 +52,10 @@ showContent = () => {
                 </div>
                     <div className = {body}>
                         <h3> Mad Max Fury Road </h3>
-                        <h5> Action ‧ 2hr 15m ‧ 2015 </h5>
-                        <div className ="movie-card__content__body">
+                        <h5> <GenreIcon/>Action <TimeIcon/> 118m <CalendarIcon/> 2015 </h5>
+                        <div className ={content}>
+                        Director : George Miller
+                        Starring : Charlize Theron, Tom Hardy
                             <p>
                             An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, 
                             and most everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able

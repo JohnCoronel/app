@@ -8,9 +8,7 @@ const Movie = ({match}) => (
     <div className = "content">
 
         <div>
-      
         <MovieCard/>
-        
            </div>
         </div>
     

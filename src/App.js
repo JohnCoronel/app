@@ -15,7 +15,7 @@ import './style/search.css';
 class App extends Component {
   render() {
     return (
-      <div className = "app">
+      <div className = "app" style = {{background:"#fafafa"}}>
     <Header/>
     <Switch>
       <Route exact path ="/" component = {Home}/>
