@@ -1,5 +1,5 @@
 import React from 'react'
-import './style/app.css';
+import './footer.css';
 
 const Footer = () => (
     <h2 className = "footer"> Footer </h2>

@@ -1,0 +1,22 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    grid-area: nav;
+}
+
+.nav {
+    margin-right:2rem;
+    display:flex;
+    align-items: center;
+}
+.nav svg {
+    margin-left: 1rem;
+}
+
+
+.header h1 {
+    font-family: 'Righteous',cursive;
+    margin-left:2rem;
+   
+}

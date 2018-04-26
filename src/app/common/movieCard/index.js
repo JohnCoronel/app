@@ -1,14 +1,14 @@
 import React from 'react';
 import ClassNames from 'classnames';
 
-import AddIcon from  "./components/AddIcon";
-import GenreIcon from './components/GenreIcon'
-import LikeIcon from "./components/LikeIcon";
-import ShareIcon from "./components/ShareIcon";
-import ReviewIcon from "./components/ReviewIcon";
-import ChevronIcon from "./components/ChevronIcon";
-import TimeIcon from "./components/TimeIcon";
-import CalendarIcon from "./components/CalendarIcon"
+import AddIcon from  "./Icons/AddIcon";
+import GenreIcon from './Icons/GenreIcon'
+import LikeIcon from "./Icons/LikeIcon";
+import ShareIcon from "./Icons/ShareIcon";
+import ReviewIcon from "./Icons/ReviewIcon";
+import ChevronIcon from "./Icons/ChevronIcon";
+import TimeIcon from "./Icons/TimeIcon";
+import CalendarIcon from "./Icons/CalendarIcon"
 
 import './moviecard.css';
 
@@ -52,10 +52,11 @@ showContent = () => {
                 </div>
                     <div className = {body}>
                         <h3> Mad Max Fury Road </h3>
-                        <h5> <GenreIcon/>Action <TimeIcon/> 118m <CalendarIcon/> 2015 </h5>
+                        <h5> <GenreIcon/> Action <TimeIcon/> 118m  <CalendarIcon/>  2013 </h5>
                         <div className ={content}>
-                        Director : George Miller
-                        Starring : Charlize Theron, Tom Hardy
+                        Director: George Miller
+                        Writers: George Miller
+                        Starring: Charlize Theron, Tom Hardy
                             <p>
                             An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, 
                             and most everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able
