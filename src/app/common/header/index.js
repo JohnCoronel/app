@@ -5,7 +5,7 @@ import SearchBar from  './searchbar/SearchBar';
 import './header.css';
 
 const Header = () => (
-    <div className = "header">
+    <div className = "nav-header">
     
     <h1>Quetzalcoatl </h1>
         

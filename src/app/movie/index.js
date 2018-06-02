@@ -1,10 +1,13 @@
 import React from 'react';
-import MovieCard from '../common/movieCard/index';
+import MovieList from '../common/movieList/movieList';
+import CreditsTable from '../movie/credits';
+import 'semantic-ui-css/semantic.min.css';
 import './movie.css';
 
 
 
 const imgUrl = "https://image.tmdb.org/t/p/w500/"
+
 
 class MoviePage extends React.Component {
     constructor(){
@@ -12,19 +15,25 @@ class MoviePage extends React.Component {
         this.state = {
             movie:{},
             error:'',
-            loading: false
+            loading: false,
+            recommended:[],
+            cast:[]
         }
     }
 
     componentDidMount(){
         const movieId = this.props.match.params.id;
         this.fetchMovie(movieId)
+        this.fetchCredits(movieId)
+        this.fetchRecommendations(movieId)
     }
     
     componentWillReceiveProps(nextProps) {
         if (this.props.location.pathname !== nextProps.location.pathname){
             const movieId = nextProps.match.params.id;
             this.fetchMovie(movieId)
+            this.fetchCredits(movieId)
+            this.fetchRecommendations(movieId)
         }
     }
 
@@ -34,14 +43,36 @@ class MoviePage extends React.Component {
         });
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=f0d9f12b62cff10da32d3bcd8da1424f&language=en-US`)
         .then((response) => {
-            console.log()
             response.json().then(data => {
                 this.setState({
                     movie:data,
                     error:'',
                     loading:false
                 })
-            
+            })
+        })
+    }
+
+    fetchRecommendations(id){
+        this.setState({
+            loading:true
+        });
+        fetch(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=f0d9f12b62cff10da32d3bcd8da1424f&language=en-US&page=1`)
+        .then(response => {
+            response.json().then(data => {
+                this.setState({recommended:data})
+            })
+        })
+    }
+
+    fetchCredits(id){
+        this.setState({
+            loading:true
+        });
+        fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=f0d9f12b62cff10da32d3bcd8da1424f`)
+        .then(response => {
+            response.json().then(data => {
+                this.setState({cast:data})
             })
         })
     }
@@ -57,13 +88,10 @@ class MoviePage extends React.Component {
               </div>
 
           </div>
-            <MovieCard/>
+            <MovieList list = {this.state.recommended}/>
+            <CreditsTable credits = {this.state.cast}/>
           </div>
       )
   }
-
-
 }
-
-
 export default MoviePage;

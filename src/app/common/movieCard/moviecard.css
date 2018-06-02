@@ -3,7 +3,6 @@
 .movie-card{
     background:#FFFFFF;
     font-family: sans-serif;
-    margin:auto;
     position:relative;
     width:210px;
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
@@ -100,13 +99,15 @@
 
 .movie-card__footer{
     background: #FFFFFF; 
-    z-index:3;
     padding-bottom:4px;
     width: 100%;
     position: absolute;
     display:flex;
     justify-content: space-around;  
     bottom:0;
+}
+.movie-card__content h5 svg {
+    padding:0;
 }
 .movie-card::after{
     position: absolute;

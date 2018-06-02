@@ -49,7 +49,7 @@ class SearchBar extends React.Component {
     renderResults() {
         const {searchQuery,searchResults} = this.state;
         
-        if (!searchQuery){
+        if (!searchQuery || !searchResults){
             return '';
         }
             if (searchResults.length > 0 ) {
@@ -61,7 +61,7 @@ class SearchBar extends React.Component {
                             key = {result.id}
                             className = "Search-result"
                         >
-                        <img src = {posterthumb + result.poster_path} />
+                        <img alt = 'poster-thumb' src = {posterthumb + result.poster_path} />
                         {result.title} 
                           </div> 
                         ))}
