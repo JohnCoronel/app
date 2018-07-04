@@ -114,5 +114,6 @@
     width:100%;
     height:2px;
     content:'';
-    background: linear-gradient(to left,#feac5e, #4bc0c8);
+    background: linear-gradient(to left, #947fcd, #e1a3bd);
+    /*background: linear-gradient(to left,#feac5e, #4bc0c8);*/
 }

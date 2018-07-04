@@ -1,6 +1,8 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
 import "./search.css"
+import Image from '../../../common/ImageWithFallback';
+import fbimg from './fallback.png';
 
 const query = "https://api.themoviedb.org/3/search/movie?api_key=f0d9f12b62cff10da32d3bcd8da1424f&language=en-US&page=1&include_adult=false&query="
 const posterthumb = "https://image.tmdb.org/t/p/w92"
@@ -61,7 +63,7 @@ class SearchBar extends React.Component {
                             key = {result.id}
                             className = "Search-result"
                         >
-                        <img alt = 'poster-thumb' src = {posterthumb + result.poster_path} />
+                        <Image alt = 'poster-thumb' fallbackSrc = {fbimg} src = {posterthumb + result.poster_path} />
                         {result.title} 
                           </div> 
                         ))}

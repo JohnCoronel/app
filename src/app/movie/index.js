@@ -1,12 +1,14 @@
 import React from 'react';
 import MovieList from '../common/movieList/movieList';
-import CreditsTable from '../movie/credits';
+import CreditsTable from '../movie/creditsTabs/';
 import 'semantic-ui-css/semantic.min.css';
+import MovieContent from './content/mainContent';
 import './movie.css';
+import ScrollList from '../movie/scrollList';
 
 
 
-const imgUrl = "https://image.tmdb.org/t/p/w500/"
+
 
 
 class MoviePage extends React.Component {
@@ -60,7 +62,7 @@ class MoviePage extends React.Component {
         fetch(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=f0d9f12b62cff10da32d3bcd8da1424f&language=en-US&page=1`)
         .then(response => {
             response.json().then(data => {
-                this.setState({recommended:data})
+                this.setState({recommended:data.results})
             })
         })
     }
@@ -80,15 +82,9 @@ class MoviePage extends React.Component {
   render() {
       return (
           <div className = "movie-page">
-          <div className = "movie-content">
-              <img src = {imgUrl + this.state.movie.poster_path}/>
-              <div className = "movie-content__info">
-                 <h1>{this.state.movie.title}</h1>
-                 <h3> {this.state.movie.release_date}</h3>
-              </div>
-
-          </div>
-            <MovieList list = {this.state.recommended}/>
+           <MovieContent movie = {this.state.movie}/>
+            <MovieList title = 'Similar Movies' list = {this.state.recommended}/>
+            <ScrollList list = {this.state.recommended}/>
             <CreditsTable credits = {this.state.cast}/>
           </div>
       )

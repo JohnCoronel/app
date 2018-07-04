@@ -12,18 +12,7 @@
     
 }
 
-.movie-content img {
-    position:relative;
-    align-self:center;
-    width:220px;
-    
-}
 
-.movie-content__info {
-  min-width:500px; 
-}
-
-.movie-content__info h1 {
-    margin-left:20px;
-    margin-top:0px;
+.Listing {
+    margin-left:2rem;
 }

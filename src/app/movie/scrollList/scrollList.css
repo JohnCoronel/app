@@ -1,0 +1,21 @@
+.scroll-list{
+    margin-top:2rem;
+    margin-bottom:2rem;
+    width:90%;
+    margin:auto;
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-item {
+    flex: 0 0 auto;
+    margin-right:1rem;
+}
+::-webkit-scrollbar {
+    display:none;
+}
+
+
