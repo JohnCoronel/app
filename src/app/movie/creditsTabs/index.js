@@ -6,7 +6,6 @@ import CrewTable from './crewPane'
 
 
 const CreditsTabs = (props) => {
-    console.log(props.credits.cast)
     const Panes = [
         {
          menuItem: 'Cast',
