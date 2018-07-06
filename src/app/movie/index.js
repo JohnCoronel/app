@@ -83,7 +83,7 @@ class MoviePage extends React.Component {
       return (
           <div className = "movie-page">
            <MovieContent movie = {this.state.movie}/>
-            <MovieList title = 'Similar Movies' list = {this.state.recommended}/>
+            {/* <MovieList title = 'Similar Movies' list = {this.state.recommended}/> */}
             <ScrollList list = {this.state.recommended}/>
             <CreditsTable credits = {this.state.cast}/>
           </div>

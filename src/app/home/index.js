@@ -46,8 +46,7 @@ import MovieList from '../common/movieList/movieList';
     return (
     <div className = "homepage">
     HomePage
-       <MovieList title='Popular' list = {this.state.popular}/>
-       <MovieList title = 'In Theaters Now' list = {this.state.current}/> 
+ 
     </div>
     )
  }
