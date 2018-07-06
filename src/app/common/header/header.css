@@ -5,14 +5,15 @@
     display:flex;
     justify-content: space-between;
     align-items:center;
-    grid-area: nav;
+
 }
 
 .nav {
-    margin-right:2rem;
     display:flex;
-    align-items: center;
+    justify-content: flex-end;
+    width:75%;
 }
+
 .nav svg {
     margin-left: 1rem;
 }

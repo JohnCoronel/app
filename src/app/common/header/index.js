@@ -12,8 +12,7 @@ const Header = () => (
         
         <ul className = "nav">
              <SearchBar/>
-             <NotificationIcon/>
-             <UserIcon/> 
+             
          </ul>
         
     </div>

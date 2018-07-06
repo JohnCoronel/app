@@ -12,7 +12,7 @@ class ScrollList extends React.Component {
     render() {
         return( 
             <div>
-                 <h3> Similar Movies </h3>
+                 <h3 style = {{marginLeft:'2rem'}}> Similar Movies </h3>
             <div className = "scroll-list"> 
        
             {
