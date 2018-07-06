@@ -9,6 +9,7 @@
 }
 
 .nav {
+    padding-left:1rem;
     display:flex;
     justify-content: flex-end;
     width:75%;
