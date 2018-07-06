@@ -5,6 +5,7 @@ import fallback from './user.png'
 
 
 
+
 const CreditsTable = (props) => (
     <Table basic = 'very' celled collapsing>
         <TableBody>{renderRows(props.credits)}</TableBody>
@@ -18,7 +19,7 @@ const renderRows = (credits) => {
    const mainCast = credits.cast.slice(0,10);
    return  mainCast.map(item => {
        return (
-        <Table.Row>
+        <Table.Row key = {item.cast_id}>
             <Table.Cell>
                 <Header as = 'h4'>
                 <Image src = {"https://image.tmdb.org/t/p/w92" + item.profile_path} fallbackSrc = {fallback} />

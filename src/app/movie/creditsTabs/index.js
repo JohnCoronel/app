@@ -4,7 +4,10 @@ import CastTable from './castPane'
 import CrewTable from './crewPane'
 
 
-
+const style = {
+    width: '90%',
+    margin: '0 auto'
+}
 const CreditsTabs = (props) => {
     const Panes = [
         {
@@ -17,7 +20,7 @@ const CreditsTabs = (props) => {
         }
     ]
     return (
-    <Tab menu = {{secondary:true, pointing:true}} panes = {Panes} /> 
+    <Tab style = {style} menu = {{secondary:true, pointing:true}} panes = {Panes} /> 
     )
 }
 

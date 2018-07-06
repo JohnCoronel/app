@@ -14,9 +14,9 @@ class ImageWithFallback extends React.Component{
         })
     }
         render(){
-            if (this.state.err) return <img src ={this.props.fallbackSrc}/>
+            if (this.state.err) return <img alt = "fallback" src ={this.props.fallbackSrc}/>
             return (
-            <img src = {this.props.src} onError = {this.handleFallback}/> )
+            <img alt = "poster" src = {this.props.src} onError = {this.handleFallback}/> )
            
         }
     }

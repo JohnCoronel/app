@@ -13,7 +13,7 @@ class ScrollList extends React.Component {
         return( <div className = "scroll-list"> 
             {
             this.props.list.map(item => {
-               return (<div className = "scroll-item"> <MovieCard movie = {item}/>
+               return (<div key = {item.title} className = "scroll-item"> <MovieCard movie = {item}/>
                 </div>)
             })}
             </div>)

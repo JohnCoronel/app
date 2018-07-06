@@ -22,7 +22,7 @@ const renderRows = (credits) => {
    const mainCrew = credits.crew.slice(0,10);
    return  mainCrew.map(item => {
        return (
-        <Table.Row>
+        <Table.Row key = {item.credit_id}>
             <Table.Cell>
                 <Header as = 'h4'>
                 <Header.Content>

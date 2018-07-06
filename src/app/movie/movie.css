@@ -1,17 +1,14 @@
 .movie-page{
+    grid-area: content;
     width:100%;
-    max-width:1200px;
     margin:auto;
 }
 
 .movie-content {
     margin-left:60px;
     margin-top:50px;
-    
-    display:flex;
-    
+    display:flex;   
 }
-
 
 .Listing {
     margin-left:2rem;

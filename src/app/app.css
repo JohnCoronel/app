@@ -1,16 +1,11 @@
 
 .app {
-    display:grid;
+    width:100%;
     min-height: 100vh; 
-
     background-color: #fafafa;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 1fr 75px;
 
-    grid-template-areas:
-    "nav"
-    "content"
-    "footer";
+
 }
 .app::before{
         content: '';
@@ -27,8 +22,9 @@
 .navbar {
     grid-area: nav; 
     display: flex;
+    flex:1;
     align-items: center;
-    width:100%;
+     width:100%;
     margin:0 auto;
    
     background-color: #fafafa;
@@ -38,26 +34,16 @@
     margin-right: 2rem;
 }
 .navbar ul * {
-    margin-right: 1rem;
-    margin-right: 1rem;
-    
+    margin-right: 1rem;   
 }
 .navbar h1 {
     font-family: 'Righteous',cursive;
     margin-left:2rem;
    
 }
-.navbar::before {
-    content: '';
-    position:absolute;
-    top: 0;
-    width:100%;
-    height:3px;
-    background:radial-gradient(#eeaeca, #94bbe9);
-}
+
 
 .footer{
-    grid-area: footer;
     background-color: #fafafa;
 }
 .content{
