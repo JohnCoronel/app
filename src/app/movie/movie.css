@@ -1,10 +1,5 @@
-
-
-.movie-content {
-    margin-top:1rem;
-    display:flex;   
-}
-
-.Listing {
-    margin-left:2rem;
+.movie-page{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
 }

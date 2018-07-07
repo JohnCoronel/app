@@ -11,7 +11,7 @@ const parseGenres = (genres) => {
     }
     return genres.map((item) => {
         return item.name
-    }).slice(0,2).join(' · ')
+    }).slice(0,1).join(' · ')
 }
 
 const moviePage = (props) => {
@@ -19,21 +19,28 @@ const moviePage = (props) => {
         <div className = "movie-content">
             <div className = "movie-content__info">
             <div className = "content-header">
+            <div className = "score">{props.movie.vote_average}</div>
             <div className = "main-info">
-                <h2>{props.movie.title}</h2>
+                <h3>{props.movie.title}</h3>
                 <div className = "sub-header">
                     <div> {parseGenres(props.movie.genres)}</div>
                     <div> {props.movie.release_date} </div>
                     <div> {props.movie.runtime}m</div> 
                 </div>
+        
                 </div>
-            
 
-                <div className = "score">{props.movie.vote_average}</div>
+                
+            
+                <img src = {imgUrl + props.movie.poster_path}/>
+                <div className = "content-info">
+                    Director 
+                    ScreenWriter
+                    Staring 
+                </div>
                 </div>
 
                 <div className = "content-body">
-                    <img src = {imgUrl + props.movie.poster_path}/>
                     <p> {props.movie.overview} </p>
                 </div>
             </div>
