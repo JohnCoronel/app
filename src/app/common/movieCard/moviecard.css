@@ -85,7 +85,6 @@
     border-radius:50%;
     position: absolute;
     z-index:5;
-    
     bottom:76px;
     right:9px;
     transition: transform.4s ease-in;
