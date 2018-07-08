@@ -1,3 +1,13 @@
 .footer{
     background-color: #fafafa;
 }
+
+@media (max-width:600px){
+    .mobile-footer {
+        display:block;
+        position:fixed;
+        bottom:0;
+        height:30px;
+        background:#FFFFFF;
+    }
+}

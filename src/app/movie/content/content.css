@@ -1,63 +1,70 @@
 .movie-content img {
-
+    align-self:center;
     display:inline-block;
-    margin-left:2rem;
-    width:50%;
-    max-width:220px;
-
-    
+    margin-left:1rem;
+    width:40%;
+    max-width:210px;
 }
 .content-body{
     width:95%;
     display:flex;
 }
-
+.content-header{
+    margin-left:2rem;
+    padding-top:1rem;
+}
+.content-header h3 {
+    font-weight:300;
+    margin-bottom:0;
+}
+.spacer-d{
+    display:inline-block;
+    width:1.2rem;
+}
+.spacer-w{
+    display:inline-block;
+    width:1.6rem;
+}
+.spacer-s {
+    display:inline-block;
+    width:1.9rem;
+}
 .score {
     float:right;
     position:relative;
     top:-2rem;
     margin-right:1rem;
     border: 4px solid #b490ca;
-    padding-top:25px;
+    padding-top:22px;
     text-align: center;
-    width: 75px;
-    height:75px;
+    width: 5rem;
+    height:5rem;
     border-radius: 50%;
     color:black;
     background-color:white;
-    font-size: 2rem;
+    font-size: 1.75rem;
    
-}
-.content-header {
-    border-radius: 10px;
-    width:100%;
-    max-width:1000px;
-    margin:auto;
-    background-image: linear-gradient(to left, #5ee7df 0%, #b490ca 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color:white;
-    height:400px;
-    margin-bottom: 2rem;
 }
 
 .sub-header {
    display:flex;
-   justify-content: space-around;
+   justify-content: space-between;
    max-width:250px;
-   margin-bottom:1rem;
 }
 .content-info {
-    display:inline-block;
-}
-.main-info{
-    margin-left:2rem;
-    width:90%;
-}
-.main-info h3 {
-    font-weight:300;
-    margin-bottom:0px;
+   width:55%;
+   margin-left:1rem;
 }
 
+
 .movie-content{
-    margin-top:4rem;
-    margin-bottom: 20rem;
+    width:100%;
+    max-width:1000px;
+    margin:auto;
+    margin-top:2rem;
+    margin-bottom:2rem;
+    background-image: linear-gradient(to left, #5ee7df 0%, #b490ca 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:white;
+    margin-bottom: 2rem;
+    padding-bottom:1rem;
 }

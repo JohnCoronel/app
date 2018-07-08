@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Route,Switch} from 'react-router-dom'
 
 import Header from './common/header/index'
-import Footer from './common/footer/index'
+import {Footer} from './common/footer/index'
 
 import Home from './home/index';
 import MoviePage from './movie/index';

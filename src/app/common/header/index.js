@@ -8,11 +8,10 @@ import './header.css';
 const Header = () => (
     <div className = "nav-header">
     
-   <Link to ="/"> <h1>Quetzalcoatl </h1></Link>
+    <div className = "logo"><Link to ="/"> <h1>Quetzalcoatl</h1></Link></div>
         
         <ul className = "nav">
              <SearchBar/>
-             
          </ul>
         
     </div>

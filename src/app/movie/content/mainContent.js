@@ -14,36 +14,32 @@ const parseGenres = (genres) => {
     }).slice(0,1).join(' · ')
 }
 
+//TODO - Content Actions - Rate, Add to List, Tag, Recommend, Like,ect..
+//TODO - ADD AVAILABLE_ON placeholders for streaming serives and Rent
 const moviePage = (props) => {
     return (
         <div className = "movie-content">
-            <div className = "movie-content__info">
-            <div className = "content-header">
             <div className = "score">{props.movie.vote_average}</div>
-            <div className = "main-info">
+            <div className = "content-header">
                 <h3>{props.movie.title}</h3>
                 <div className = "sub-header">
                     <div> {parseGenres(props.movie.genres)}</div>
                     <div> {props.movie.release_date} </div>
                     <div> {props.movie.runtime}m</div> 
                 </div>
-        
-                </div>
-
-                
-            
+            </div>
+            <div className = "content-body">
                 <img src = {imgUrl + props.movie.poster_path}/>
                 <div className = "content-info">
-                    Director 
-                    ScreenWriter
-                    Staring 
-                </div>
-                </div>
-
-                <div className = "content-body">
-                    <p> {props.movie.overview} </p>
-                </div>
+                    <div className = "sub-info">Director <span className = "spacer-d"></span>  Damien Chazelle </div>
+                    <div className = "sub-info">Writers <span className = "spacer-w"></span>     Damien Chazelle </div>
+                    <div className  = "sub-info">Staring <span className = "spacer-s"></span>   Miles Teller, JK Simmons </div> 
+                </div> 
             </div>
+            {/* <div className = "content-action">
+            
+            </div> */
+            }
         </div>
     )
 }

@@ -5,4 +5,13 @@ const Footer = () => (
     <h2 className = "footer"> Footer </h2>
 )
 
-export default Footer;
+const MobileFooter =() => {
+    return <div className = "mobile-footer">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>    
+        </div>
+}
+export {Footer,MobileFooter}

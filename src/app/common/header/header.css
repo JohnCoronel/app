@@ -15,16 +15,23 @@
     width:75%;
 }
 
-.nav svg {
-    margin-left: 1rem;
-}
-
-
 .nav-header h1 {
     font-family: 'Righteous',cursive;
-    margin:0;
     padding-left:1rem;
-    
-   
-   
 }
+
+@media(max-width:600px){
+    .nav{
+        display:none;
+    }
+    .logo{
+        padding-top:.5rem;
+        margin:auto;
+    }
+   .nav-header h1 {
+       padding-left:0;
+   }
+}
+
+
+
