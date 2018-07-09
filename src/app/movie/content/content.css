@@ -1,5 +1,5 @@
 .movie-content img {
-    align-self:center;
+    align-self:flex-start;
     display:inline-block;
     padding-left:1rem;
     width:40%;
@@ -47,7 +47,6 @@
 .score-card {
     position:relative;
     margin-right:.5rem;
-    margin-bottom:.5rem;
     float:right;
     display:flex;
     flex-direction:column;
@@ -67,7 +66,7 @@
 
 .content-info {
    width:55%;
-   margin-left:1rem;
+   margin-left:.5rem;
   
 }
 
