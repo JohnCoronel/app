@@ -1,20 +1,23 @@
 .movie-content img {
     align-self:center;
     display:inline-block;
-    margin-left:1rem;
+    padding-left:1rem;
     width:40%;
     max-width:210px;
 }
 .content-body{
-    width:95%;
+    width:100%;
     display:flex;
 }
 .content-header{
-    margin-left:2rem;
-    padding-top:1rem;
+    margin-left:1rem;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    max-width:600px;
 }
 .content-header h3 {
-    font-weight:300;
+    font-weight:600;
     margin-bottom:0;
 }
 .spacer-d{
@@ -29,31 +32,52 @@
     display:inline-block;
     width:1.9rem;
 }
-.score {
-    float:right;
-    position:relative;
-    top:-2rem;
-    margin-right:1rem;
-    border: 4px solid #b490ca;
+.score { 
+    border: 4px solid black;
     padding-top:22px;
     text-align: center;
     width: 5rem;
     height:5rem;
     border-radius: 50%;
     color:black;
-    background-color:white;
+    background-color:#fafafa;
     font-size: 1.75rem;
-   
+}
+
+.score-card {
+    position:relative;
+    margin-right:.5rem;
+    margin-bottom:.5rem;
+    float:right;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.score-card h4 {
+    padding-top:.5rem;
+    margin-top:0;
 }
 
 .sub-header {
    display:flex;
-   justify-content: space-between;
-   max-width:250px;
 }
+.sub-header div {
+    margin-right:1rem;
+}
+
 .content-info {
    width:55%;
    margin-left:1rem;
+  
+}
+
+.content-info h4{
+    display:inline-block;
+    margin-bottom:0;
+
+}
+.sub-info {
+    margin-bottom:.25rem;
 }
 
 
@@ -63,8 +87,15 @@
     margin:auto;
     margin-top:2rem;
     margin-bottom:2rem;
-    background-image: linear-gradient(to left, #5ee7df 0%, #b490ca 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color:white;
+    /* background-image: linear-gradient(to left, #5ee7df 0%, #b490ca 100%); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:black;
     margin-bottom: 2rem;
-    padding-bottom:1rem;
+    padding-bottom:1.5rem;
+}
+
+@media (max-width:550px) {
+    .info-detail{
+        display:block;
+        padding-left:.5rem;
+    }
 }
