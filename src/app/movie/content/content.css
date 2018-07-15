@@ -44,20 +44,9 @@
     font-size: 1.75rem;
 }
 
-.score-card {
-    position:relative;
-    margin-right:.5rem;
-    float:right;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-.score-card h4 {
-    padding-top:.5rem;
-    margin-top:0;
-}
 
 .sub-header {
+    color:#666666;
    display:flex;
 }
 .sub-header div {

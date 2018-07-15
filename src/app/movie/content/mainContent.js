@@ -1,4 +1,8 @@
 import React from 'react';
+import NetflixIcon from '../../common/icons/netflix';
+import AmazonIcon from '../../common/icons/amazonIcon'
+import HuluIcon from '../../common/icons/hulu';
+import Rating from './rating';
 import '../content/content.css';
 
 
@@ -30,16 +34,18 @@ const moviePage = (props) => {
         <div className = "movie-content">
             <div className = "content-header">
             <div className = "primary-info">
-                <h3>{props.movie.title}</h3>
+                <h2>{props.movie.title}</h2>
                 <div className = "sub-header">
-                <div className = "genre-list"> {parseGenres(props.movie.genres)} </div>
-                    <div> {renderDate(props.movie.release_date)} </div>
-                    <div> {props.movie.runtime}m</div>       
+                    <div> {renderDate(props.movie.release_date)} </div>      
+                </div>
+                <div>
+                    <NetflixIcon width ={20} />
+                    <AmazonIcon width = {20} />
+                    <HuluIcon width = {40}/>
                 </div>
                 </div>
-            <div className = "score-card">
-                <div className = "score">{props.movie.vote_average}</div>
-            </div>
+           
+            <Rating score = {props.movie.vote_average}/>
             </div>
             <div className = "content-body">
                 <img src = {imgUrl + props.movie.poster_path}/>
