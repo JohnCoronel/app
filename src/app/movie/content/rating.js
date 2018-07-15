@@ -9,9 +9,7 @@ export default class Rating extends React.Component {
       globalRating: 4.7
     };
   }
-  calculateRating = val => {
-    return val / 2;
-  };
+
   render() {
     const val = this.state.userRating;
     const ratingStyle = {
@@ -19,7 +17,7 @@ export default class Rating extends React.Component {
       paddingLeft: "10px"
     };
     return (
-      <div style={{ maxWidth: "200px" }}>
+      <div style={{ maxWidth: "200px",touchAction:'none'}}>
         <div style={ratingStyle}>
           <div
             style={{ position: "relative", left: "5rem", paddingTop: "2.5rem" }}
