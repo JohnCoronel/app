@@ -10,6 +10,15 @@ export default class Rating extends React.Component {
     };
   }
 
+   parseGenres = (genres) => {
+    if (!genres) {
+        return ''
+    }
+    return genres.map((item) => {
+        return item.name
+    }).slice(0,2).join(' / ')
+}
+
   render() {
     const val = this.state.userRating;
     const ratingStyle = {
@@ -33,16 +42,16 @@ export default class Rating extends React.Component {
             max={20}
             step={1}
             bgColor="#ccc"
-            color="#5ee7df"
+            color="#fc5c7d"
             radius={55}
-            strokeWidth={11}
+            strokeWidth={12}
             sliced={false}
             onChange={val => this.setState({ userRating: val / 2 })}
           />
         </div>
         <div>
           <h4 style={{ marginTop: ".5rem", fontWeight: "500" }}>
-            Drama/Action/Science fiction
+            {this.parseGenres(this.props.genres)}
           </h4>
         </div>
       </div>

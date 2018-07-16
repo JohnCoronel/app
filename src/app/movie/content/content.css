@@ -2,7 +2,7 @@
     align-self:flex-start;
     display:inline-block;
     padding-left:1rem;
-    width:40%;
+    width:45%;
     max-width:210px;
 }
 .content-body{
@@ -66,6 +66,18 @@
 }
 .sub-info {
     margin-bottom:.25rem;
+}
+
+.primary-info {
+    display:flex;
+    align-items:center;
+    margin-bottom:1rem;
+}
+.primary-info h2 {
+    margin:0;
+}
+.release-year {
+    padding-left:.5locarem;
 }
 
 

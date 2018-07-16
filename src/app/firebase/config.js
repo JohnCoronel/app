@@ -1,0 +1,14 @@
+import firebase, { firestore } from 'firebase'
+require('firebase/firestore')
+
+var config = {
+    apiKey: "AIzaSyDWUiivPFcQ63OXdl1Ys0K48dhBy3BGyQY",
+    authDomain: "quetzalcoatl-4d987.firebaseapp.com",
+    databaseURL: "https://quetzalcoatl-4d987.firebaseio.com",
+    projectId: "quetzalcoatl-4d987",
+    storageBucket: "quetzalcoatl-4d987.appspot.com",
+    messagingSenderId: "355660869880"
+  };
+  firebase.initializeApp(config);
+
+  export const db = firebase.firestore()
