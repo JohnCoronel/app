@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const UserIcon = (props) => {
+const User = (props) => {
     return (
         <svg  stlye = {{cursor:'pointer'}} width = {props.width} x="0px" y="0px" viewBox="0 0 53 53">
         <path fill = "#E7ECED" d="M18.613,41.552l-7.907,4.313c-0.464,0.253-0.881,0.564-1.269,0.903C14.047,50.655,19.998,53,26.5,53
@@ -23,7 +23,7 @@ const UserIcon = (props) => {
 
 }
 
-UserIcon.defaultProps = {
+User.defaultProps = {
     width: 40
 }
-export default UserIcon;
+export default User;

@@ -3,7 +3,7 @@ import {Logout} from '../../../actions/index'
 import {connect} from 'react-redux'
 import styled from 'styled-components'
 import {withRouter} from 'react-router-dom'
-import UserIcon from '../icons/userIcon'
+import UserIcon from '../icons/User'
 
 
 const Menu = styled.div `

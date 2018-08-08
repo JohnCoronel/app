@@ -1,6 +1,6 @@
 import React from 'react';
 import UserMenu from './userMenu'
-import UserIcon from './userIcon'
+import UserIcon from './User'
 import {connect} from 'react-redux'
 
 
