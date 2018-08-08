@@ -22,6 +22,7 @@ const UserIcon = (props) => {
     )
 
 }
+
 UserIcon.defaultProps = {
     width: 40
 }
