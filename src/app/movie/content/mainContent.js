@@ -1,5 +1,5 @@
 import React from 'react';
-import Rating from './rating';
+
 import StreamIcons from './streamIcons'
 import ActionRow from './ActionRow'
 import '../content/content.css';
@@ -33,11 +33,9 @@ const moviePage = (props) => {
             <div className = "content-body">
                 <img src = {imgUrl + props.movie.poster_path}/>
                 <div className = "content-info">
-                <Rating  score = {props.movie.vote_average}/>
+              
                    <ActionRow/>
-                    {/* <div className = "sub-info"><h4>Director</h4> <span className = "spacer-d"></span> <span className ="info-detail">Damien Chazelle </span> </div>
-                    <div className = "sub-info"><h4>Writers</h4> <span className = "spacer-w"></span> <span className = "info-detail">  Damien Chazelle</span> </div>
-                    <div className  = "sub-info"><h4>Staring</h4><span className = "spacer-s"></span> <span className = "info-detail">Miles Teller, JK Simmons </span></div> */}
+      
                     <div className = "actions">
                     <StreamIcons/>
                         <div className = "synopsis"> 

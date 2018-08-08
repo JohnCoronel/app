@@ -1,5 +1,4 @@
 import React from 'react';
-import MovieList from '../common/movieList/movieList';
 import CreditsTable from '../movie/creditsTabs/';
 import 'semantic-ui-css/semantic.min.css';
 import MovieContent from './content/mainContent';
@@ -12,8 +11,8 @@ import ScrollList from '../movie/scrollList';
 
 
 class MoviePage extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             movie:{},
             error:'',
@@ -83,7 +82,6 @@ class MoviePage extends React.Component {
       return (
           <div className = "movie-page">
            <MovieContent movie = {this.state.movie}/>
-            {/* <MovieList title = 'Similar Movies' list = {this.state.recommended}/> */}
             <ScrollList list = {this.state.recommended}/>
             <CreditsTable credits = {this.state.cast}/>
           </div>

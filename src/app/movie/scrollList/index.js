@@ -11,7 +11,7 @@ class ScrollList extends React.Component {
     }
 
     renderList = (list) => {
-        if (list != null || list != undefined){
+        if (list !== null || list !== undefined){
             return list.map(item => {
                 return (
                     <div key = {item.title} className = "scroll-item">
@@ -23,7 +23,6 @@ class ScrollList extends React.Component {
     }
 
     render() {
-        console.log(this.props.list)
         return( 
             <div>
                  <h3 style = {{marginLeft:'2rem'}}> Similar Movies </h3>

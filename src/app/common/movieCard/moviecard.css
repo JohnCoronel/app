@@ -5,7 +5,6 @@
     font-family: sans-serif;
     position:relative;
     width:210px;
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
 }
 
 .movie-card__image {
@@ -33,6 +32,7 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     overflow:hidden;
     position:relative;
+    padding-top:4px;
     height:90px;
     transition: .5s ease-in;
 }
@@ -65,10 +65,10 @@
 }
 
 .movie-card__content h5 {
-    margin-left:.3rem;
-    margin-top:.2rem;
-    margin-bottom:.5rem;
-    padding-top:0;
+    display:flex;
+    padding: 2px 10px;
+    margin:0;
+    justify-content: space-between;
     font-weight:300;
     color:#777;
 }
@@ -79,6 +79,7 @@
 }
 
 .movie-card__content__btn {
+    cursor:pointer;
     box-shadow: 0 -3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     background-color:white;
     height:32px;
@@ -98,7 +99,7 @@
 
 .movie-card__footer{
     background: #FFFFFF; 
-    padding-bottom:4px;
+    padding-bottom:5px;
     width: 100%;
     position: absolute;
     display:flex;
@@ -113,5 +114,5 @@
     width:100%;
     height:2px;
     content:'';
-    background: linear-gradient(to left,#feac5e, #4bc0c8);
+    background: linear-gradient(to left,#ffafbd, #ffc3a0);
 }

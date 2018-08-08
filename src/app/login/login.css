@@ -1,0 +1,45 @@
+
+.login-page {
+    flex:1;
+}
+
+
+.input {
+    width:95%;
+    max-width:450px;
+    margin-bottom:1rem;
+    
+
+}
+.login-page_content {
+ width:320px;
+
+ margin:auto;
+ margin-top:10vh;
+}
+.login-form {
+    width:320px;
+    margin: auto;
+}
+
+.login-btn {
+color:white;
+height:3rem;
+border:none;
+width: 45%;
+margin: auto;
+background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+}
+
+
+
+.register-btn {
+
+width:45%;
+border:none;
+color:white;
+height:3rem;
+margin-top:1rem;
+background-image:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}

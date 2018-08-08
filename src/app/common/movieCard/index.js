@@ -54,11 +54,9 @@ showContent = () => {
                 </div>
                     <div className = {body}>
                         <h3>{this.props.movie.title}</h3>
-                        <h5> <GenreIcon/> Action <TimeIcon/> 118m  <CalendarIcon/>  2013 </h5>
+                        <h5>  <span><GenreIcon/> Action </span> <span><TimeIcon/> 118m </span>  <span><CalendarIcon/>  2013 </span> </h5>
                         <div className ={content}>
-                        Director: George Miller
-                        Writers: George Miller
-                        Starring: Charlize Theron, Tom Hardy
+                        
                             <p>
                             {
                                 this.props.movie.overview

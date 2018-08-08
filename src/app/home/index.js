@@ -1,5 +1,6 @@
 import React from 'react';
 import MovieList from '../common/movieList/movieList';
+import './home.css';
 
 
 
@@ -45,7 +46,7 @@ import MovieList from '../common/movieList/movieList';
      
     return (
     <div className = "homepage">
-    HomePage
+   
  
     </div>
     )
