@@ -1,5 +1,4 @@
 import React from 'react';
-import MovieList from '../common/movieList/movieList';
 import './home.css';
 
 
