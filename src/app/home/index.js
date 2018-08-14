@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../common/header'
 import './home.css';
 
 
@@ -45,8 +46,8 @@ import './home.css';
      
     return (
     <div className = "homepage">
+        <Header/>
    
- 
     </div>
     )
  }

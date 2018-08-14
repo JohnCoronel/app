@@ -1,13 +1,13 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 
 
 const HomeIcon = (props) => {
     return (
-        <Link to = '/'>
+        <NavLink exact = {true} to = '/' activeStyle = {{fill:'#E75480'}}>
         <span>
-            <svg  width = "19px" x="0px" y="0px"
+            <svg  height = "20px" width = "21px" x="0px" y="0px"
 	 viewBox="0 0 512 512"  >
 <g>
 	<g>
@@ -28,7 +28,7 @@ const HomeIcon = (props) => {
 </g>
 </svg>
         </span>
- </Link>
+ </NavLink>
     )
 }
 export default HomeIcon;

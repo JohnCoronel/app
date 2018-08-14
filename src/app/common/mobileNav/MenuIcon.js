@@ -1,9 +1,11 @@
 import React from 'react';
-
+import {ToggleMenu} from '../../actions/menu'
+import {connect} from 'react-redux';
 const MenuIcon = (props) => {
-    return (
     
-        <span>
+    
+    return (
+        <span onClick = {props.ToggleMenu}>
             <svg width = "16px" enableBackground = "new 0 0 512 512" x="0px" y="0px" viewBox="0 0 512 512" >
             <g>
 	        <g>
@@ -30,4 +32,4 @@ const MenuIcon = (props) => {
     )
 }
 
-export default MenuIcon;
+export default connect(null,{ToggleMenu}) (MenuIcon);

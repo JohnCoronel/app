@@ -5,9 +5,6 @@
     width:100%;
     min-height: 100vh; 
     background-color: #fafafa;
-    grid-template-columns: 1fr;
-
-
 }
 .app::before{
         content: '';
@@ -39,7 +36,6 @@
     background-color: #fafafa;
 }
 .content{
-    grid-area:content;
     background: #fafafa;
 }
 
