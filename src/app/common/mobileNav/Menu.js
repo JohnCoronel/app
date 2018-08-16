@@ -1,25 +1,27 @@
 import React from 'react'
+import {withRouter,Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 import User from '../icons/userDefault'
 import {ToggleMenu} from '../../actions/menu'
-
+import {Logout} from '../../actions/index'
 
 //TODO - Attach Dispatch actions
 
 const MobileMenu = styled.div`
-    width: ${ props => props.active ? '75%' : '0px'};
+    transform: ${props => props.active ? 'translateX(0)':'translateX(75vw)'};
+    transition: transform .3s ease-in-out;
+    
     display:flex;
+    width: 75vw;
     flex-direction:column;
     overflow:hidden;
-    transition:width .3s;
     background:white;
     top:0;
     right:0;
     position:fixed;
     box-shadow: ${ props => props.active ? '-2px 0px 1px 0px rgba(0, 0, 0, 0.12)' : 'none'};
-    height: calc(100vh - 41px);
+    height: calc(100vh - 40px);
     z-index:11;
 `
 
@@ -36,32 +38,40 @@ const UserDetails = styled.div`
 `
 
 const Button = styled.button`
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    border:none;
     border-radius: 25px;
     display:inline-block;
-    flex:none;
     margin: 1rem auto;
     width:120px;
+    color:white;
     height:40px;
 `
-const Logout = Button.extend`
+const LogoutBtn = Button.extend`
     color: white;
     background: blue;
 
 `
 const Login = Button.extend`
-    color:white;
-    background: red;
+
 `
 const Register = Button.extend`
-    background:red;
-    color:white;
+`
+const ButtonGroup = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 `
 const Header = styled.h2`
     padding-top:1rem;
     margin: 1rem auto;
     font-family:Righteous;
-
 `
+
+const LogoutRedirect = (props) => {
+    props.history.push('/')
+    props.Logout()
+}
 const Menu = (props) => {
     return (<MobileMenu  onClick = {props.ToggleMenu} active = {props.active}>
             <Header> Quetzalcoatl </Header>
@@ -74,7 +84,8 @@ const Menu = (props) => {
             }
             
             {
-                props.auth ?  <Logout> Logout </Logout> : <div> <Login> Sign In </Login> <Register> Register </Register></div>
+            props.auth ?  <LogoutBtn onClick = {() => LogoutRedirect(props)}> Logout </LogoutBtn> : 
+            <ButtonGroup>  <Link to = "/login"><Login> Sign In </Login></Link><Link to = "register"><Register> Register </Register></Link> </ButtonGroup>
             }
         </MobileMenu>)
 
@@ -89,5 +100,5 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps,{ToggleMenu})(Menu);
+export default withRouter(connect(mapStateToProps,{Logout,ToggleMenu})(Menu));
 

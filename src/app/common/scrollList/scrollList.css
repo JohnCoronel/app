@@ -14,7 +14,7 @@
 
 .scroll-item {
     flex: 0 0 auto;
-    margin-right:1rem;
+    padding: 0 .5rem;
 }
 ::-webkit-scrollbar {
     display:none;

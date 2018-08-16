@@ -2,8 +2,10 @@ import React from 'react';
 import ClassNames from 'classnames';
 
 import AddIcon from  "./Icons/AddIcon";
+import placeholder from './posterPlaceholder.svg'
 import GenreIcon from './Icons/GenreIcon'
 import LikeIcon from "./Icons/LikeIcon";
+import ProgressiveImage from 'react-progressive-image'
 import ShareIcon from "./Icons/ShareIcon";
 import ReviewIcon from "./Icons/ReviewIcon";
 import ChevronIcon from "./Icons/ChevronIcon";
@@ -50,7 +52,11 @@ showContent = () => {
         return(
             <div className = "movie-card">
                 <div className = {image}>
-               <Link to = {`/movie/${this.props.movie.id}`}><img  src = {`https://image.tmdb.org/t/p/w500/${this.props.movie.poster_path}`} alt = "movie poster"></img></Link>
+               <Link to = {`/movie/${this.props.movie.id}`}>
+               <ProgressiveImage src ={`https://image.tmdb.org/t/p/w500/${this.props.movie.poster_path}`} placeholder = {placeholder}>
+                { src => <img src = {src} alt = 'poster' />}
+               </ProgressiveImage>
+               </Link>
                 </div>
                     <div className = {body}>
                         <h3>{this.props.movie.title}</h3>

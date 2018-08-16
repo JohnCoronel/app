@@ -48,15 +48,18 @@ const Results = styled.div`
     margin:100px auto;
     width:75%;
     display:flex;
-  
     flex-direction:column;
 `
 
 const Result = styled.div`
     display:flex;
-    padding-left: 5px;
     margin-top:.25rem;
     align-items:center;
+
+    & img {
+        margin-right:5px;
+    }
+    
 `
 
 

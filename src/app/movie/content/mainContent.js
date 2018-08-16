@@ -27,7 +27,7 @@ const moviePage = (props) => {
             <div className = "content-header">
             <div className = "primary-info">
                 <h2>{props.movie.title}</h2>
-                 <div className = "release-year"> {renderDate(props.movie.release_date)} </div>      
+                 <div className = "release-year"> ({renderDate(props.movie.release_date)}) </div>      
                 </div>
             </div>
             <div className = "content-body">

@@ -1,9 +1,10 @@
 import React from 'react';
 import CreditsTable from '../movie/creditsTabs/';
+import Header from '../common/header'
 import 'semantic-ui-css/semantic.min.css';
 import MovieContent from './content/mainContent';
 import './movie.css';
-import ScrollList from '../movie/scrollList';
+import ScrollList from '../common/scrollList'
 
 
 
@@ -81,8 +82,9 @@ class MoviePage extends React.Component {
   render() {
       return (
           <div className = "movie-page">
+          <Header/>
            <MovieContent movie = {this.state.movie}/>
-            <ScrollList list = {this.state.recommended}/>
+            <ScrollList   title = "Similar Films" list = {this.state.recommended}/>
             <CreditsTable credits = {this.state.cast}/>
           </div>
       )
