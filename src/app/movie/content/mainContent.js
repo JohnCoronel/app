@@ -1,6 +1,10 @@
 import React from 'react';
-
+import {Loader} from 'semantic-ui-react'
+import placeholder from './placeholder.svg'
+import Score from './rating'
+import Rating from './review'
 import StreamIcons from './streamIcons'
+import ProgressiveImage from 'react-progressive-image'
 import ActionRow from './ActionRow'
 import '../content/content.css';
 
@@ -18,39 +22,32 @@ const renderDate = date => {
 
 
 
-//TODO - Content Actions - Rate, Add to List, Tag, Recommend, Like,ect.. (Bottom)
-//TODO - ADD AVAILABLE_ON placeholders for streaming serives and Rent - third row in content header
-//TODO - ADD Synopsis - overflows on mobile
 const moviePage = (props) => {
+    if (props.contentLoading) {
+        <Loader active = {props.contentLoading}/> 
+    }
+    else {
     return (
         <div className = "movie-content">
             <div className = "content-header">
             <div className = "primary-info">
-                <h2>{props.movie.title}</h2>
-                 <div className = "release-year"> ({renderDate(props.movie.release_date)}) </div>      
+                <h2>{props.movie.title} <span className = "release-year"> ({renderDate(props.movie.release_date)}) </span></h2>
                 </div>
             </div>
             <div className = "content-body">
-                <img src = {imgUrl + props.movie.poster_path}/>
+                <ProgressiveImage src ={`https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`} placeholder = {placeholder}>
+                { src => <img src = {src} alt = 'poster' />}
+               </ProgressiveImage>
                 <div className = "content-info">
-              
+                <Score score = {props.movie.vote_average} genres ={props.movie.genres}/>
+                <Rating auth = {props.auth} rating = {0} score = {()=> console.log('scored')} />
                    <ActionRow/>
-      
-                    <div className = "actions">
-                    <StreamIcons/>
-                        <div className = "synopsis"> 
-                            <h4> Overview </h4>
-                            {props.movie.overview} 
-                        </div>
-                    </div>
+                   
+                   
                 </div> 
             </div>
-            {/* <div className = "content-action">
-            
-            </div> */
-            }
         </div>
-    )
+    )}
 }
 
 export default moviePage;

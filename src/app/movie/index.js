@@ -16,8 +16,9 @@ class MoviePage extends React.Component {
         super(props);
         this.state = {
             movie:{},
-            error:'',
-            loading: false,
+            contentLoading:false,
+            creditsLoading:false,
+            recLoading:false,
             recommended:[],
             cast:[]
         }
@@ -41,15 +42,14 @@ class MoviePage extends React.Component {
 
     fetchMovie(id){
         this.setState({
-            loading:true
+            contentLoading:true
         });
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=f0d9f12b62cff10da32d3bcd8da1424f&language=en-US`)
         .then((response) => {
             response.json().then(data => {
                 this.setState({
                     movie:data,
-                    error:'',
-                    loading:false
+                    contentLoading:false
                 })
             })
         })
@@ -57,24 +57,30 @@ class MoviePage extends React.Component {
 
     fetchRecommendations(id){
         this.setState({
-            loading:true
+            recLoading:true
         });
         fetch(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=f0d9f12b62cff10da32d3bcd8da1424f&language=en-US&page=1`)
         .then(response => {
             response.json().then(data => {
-                this.setState({recommended:data.results})
+                this.setState({
+                    recommended:data.results,
+                    recLoading:false
+                })
             })
         })
     }
 
     fetchCredits(id){
         this.setState({
-            loading:true
+            creditsLoading:true
         });
         fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=f0d9f12b62cff10da32d3bcd8da1424f`)
         .then(response => {
             response.json().then(data => {
-                this.setState({cast:data})
+                this.setState({
+                    cast:data,
+                    creditsLoading:false
+                })
             })
         })
     }
@@ -83,9 +89,9 @@ class MoviePage extends React.Component {
       return (
           <div className = "movie-page">
           <Header/>
-           <MovieContent movie = {this.state.movie}/>
-            <ScrollList   title = "Similar Films" list = {this.state.recommended}/>
-            <CreditsTable credits = {this.state.cast}/>
+           <MovieContent  loading = {this.state.contentLoading} movie = {this.state.movie}/>
+            <ScrollList   loading = {this.state.recLoading} title = "Similar Films" list = {this.state.recommended}/>
+            <CreditsTable loading = {this.state.creditsLoading} credits = {this.state.cast}/>
           </div>
       )
   }

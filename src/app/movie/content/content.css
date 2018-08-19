@@ -1,25 +1,24 @@
-.movie-content img {
-    align-self:flex-start;
-    display:inline-block;
-    margin-left:.5rem;
-    width:45%;
+
+
+.content-body img {
+    width:50%;
     max-width:210px;
+    align-self:flex-start;
+    margin-left:.5rem;
 }
 .content-body{
+    margin: 0 auto;
     width:100%;
     display:flex;
 }
 .content-header{
-    margin-left:1rem;
     display:flex;
     justify-content: space-between;
     align-items:center;
     max-width:600px;
+    margin-left:.5rem;
 }
-.content-header h3 {
-    font-weight:600;
-    margin-bottom:0;
-}
+
 .spacer-d{
     display:inline-block;
     width:1.2rem;
@@ -54,6 +53,8 @@
 }
 
 .content-info {
+   display:flex;
+   flex-direction:column;
    width:55%;
    margin-left:.5rem;
   
@@ -69,15 +70,16 @@
 }
 
 .primary-info {
-    display:flex;
-    align-items:center;
-    margin-bottom:1rem;
+    margin-bottom:.25rem;
 }
 .primary-info h2 {
     margin:0;
+    padding-right:.3rem;
 }
 .release-year {
-    padding-left:.5locarem;
+    font-size:1rem;
+    padding-top:.3rem;
+    padding-left:.3rem
 }
 
 

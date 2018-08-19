@@ -1,8 +1,27 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Share = styled.svg`
+	x: 0px;
+	y:0px;
+	width:21px;
+	cursor:pointer;
+	height:21px;
+
+	&:hover {
+		& path {
+			fill: #E75480;
+		}
+	}
+
+`
+
+
+
 
 const ShareIcon = props => {
     return(
-        <svg viewBox = "0 0 57 57" x="0px" y="0px" width="20px" height = "20px">
+        <Share viewBox = "0 0 57 57">
          <g>
 	<path fill = "#424A60" d="M42.111,8.847c-0.473-0.29-1.087-0.143-1.376,0.327c-0.29,0.471-0.143,1.086,0.327,1.376
 		C48.224,14.96,52.5,22.604,52.5,31c0,2.067-0.271,4.137-0.805,6.152c-0.141,0.533,0.177,1.081,0.711,1.223
@@ -19,7 +38,7 @@ const ShareIcon = props => {
 <circle fill = "#7383BF" cx="6.5" cy="43" r="6"/>
 <circle fill = "#43B05C" cx="50.5" cy="43" r="6"/>
 
-            </svg>
+            </Share>
     )
 }
 export default ShareIcon;

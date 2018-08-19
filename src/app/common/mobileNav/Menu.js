@@ -21,7 +21,7 @@ const MobileMenu = styled.div`
     right:0;
     position:fixed;
     box-shadow: ${ props => props.active ? '-2px 0px 1px 0px rgba(0, 0, 0, 0.12)' : 'none'};
-    height: calc(100vh - 40px);
+    height: calc(100vh - 45px);
     z-index:11;
 `
 
@@ -45,7 +45,7 @@ const Button = styled.button`
     margin: 1rem auto;
     width:120px;
     color:white;
-    height:40px;
+    height:45px;
 `
 const LogoutBtn = Button.extend`
     color: white;

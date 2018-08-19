@@ -1,17 +1,28 @@
 import React from 'react'
-import LikeIcon from './Icons/LikeIcon'
-import ShareIcon from './Icons/ShareIcon'
-import ReviewIcon from './Icons/ReviewIcon'
-import AddIcon from './Icons/AddIcon'
+import LikeIcon from '../../common/buttons/LikeIcon'
+import ShareIcon from '../../common/buttons/ShareIcon'
+import ReviewIcon from '../../common/buttons/ReviewIcon'
+import AddIcon from '../../common/buttons/AddIcon'
+import styled from 'styled-components'
 
-const ActionRow = (props) => {
+
+const Row = styled.div`
+    display:flex;
+    justify-content:space-between;
+    padding-top:1rem;
+    align-self:center;
+    width:120px;
+
+`
+
+const ActionRow = () => {
     return (
-        <div>
-        <LikeIcon/>
-        <ShareIcon/>
-        <ReviewIcon/>
-        <AddIcon/>
-    </div>
+        <Row>
+            <LikeIcon/>
+            <ShareIcon/>
+            <ReviewIcon/>
+            <AddIcon/>
+        </Row>
     )
 }
 
