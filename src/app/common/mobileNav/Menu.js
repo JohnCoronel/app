@@ -85,7 +85,7 @@ const Menu = (props) => {
             
             {
             props.auth ?  <LogoutBtn onClick = {() => LogoutRedirect(props)}> Logout </LogoutBtn> : 
-            <ButtonGroup>  <Link to = "/login"><Login> Sign In </Login></Link><Link to = "register"><Register> Register </Register></Link> </ButtonGroup>
+            <ButtonGroup>  <Link to = "/login"><Login> Sign In </Login></Link><Link to = "/register"><Register> Register </Register></Link> </ButtonGroup>
             }
         </MobileMenu>)
 

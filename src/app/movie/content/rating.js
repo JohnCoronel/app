@@ -8,11 +8,11 @@ import GenreIcon from './GenreIcon'
 
 const Score = styled.div`
     box-sizing:content-box;
-    font-size:1.6rem;
+    font-size:1.7rem;
     margin:0;    
     text-align:center;
-    width : 70px;
-    line-height:70px;
+    width : 75px;
+    line-height:75px;
     font-family: sans-serif;
     border-radius:50%;
     border:3px solid black;

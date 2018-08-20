@@ -19,8 +19,11 @@ class MoviePage extends React.Component {
             contentLoading:false,
             creditsLoading:false,
             recLoading:false,
-            recommended:[],
-            cast:[]
+            staring:[],
+            directors:[],
+            screenwriters:[],
+            recommended:[], 
+            credits:[]
         }
     }
 
@@ -42,14 +45,16 @@ class MoviePage extends React.Component {
 
     fetchMovie(id){
         this.setState({
-            contentLoading:true
+            contentLoading:true,
+         
         });
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=f0d9f12b62cff10da32d3bcd8da1424f&language=en-US`)
         .then((response) => {
             response.json().then(data => {
                 this.setState({
                     movie:data,
-                    contentLoading:false
+                    contentLoading:false,
+                
                 })
             })
         })
@@ -57,14 +62,15 @@ class MoviePage extends React.Component {
 
     fetchRecommendations(id){
         this.setState({
-            recLoading:true
+            recLoading:true,
+
         });
         fetch(`https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=f0d9f12b62cff10da32d3bcd8da1424f&language=en-US&page=1`)
         .then(response => {
             response.json().then(data => {
                 this.setState({
                     recommended:data.results,
-                    recLoading:false
+                    recLoading:false,
                 })
             })
         })
@@ -77,9 +83,20 @@ class MoviePage extends React.Component {
         fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=f0d9f12b62cff10da32d3bcd8da1424f`)
         .then(response => {
             response.json().then(data => {
+                let staring = data.cast.slice(0,4)
+                let directors = data.crew.filter( credit =>
+                    credit.job === 'Director'
+                )
+                 let writers = data.crew.filter( credit =>
+                    credit.job === 'Screenplay'
+                )
                 this.setState({
-                    cast:data,
-                    creditsLoading:false
+                    credits:data,
+                    creditsLoading:false,
+                    staring:staring,
+                    directors:directors,
+                    screenwriters:writers
+
                 })
             })
         })
@@ -89,9 +106,9 @@ class MoviePage extends React.Component {
       return (
           <div className = "movie-page">
           <Header/>
-           <MovieContent  loading = {this.state.contentLoading} movie = {this.state.movie}/>
-            <ScrollList   loading = {this.state.recLoading} title = "Similar Films" list = {this.state.recommended}/>
-            <CreditsTable loading = {this.state.creditsLoading} credits = {this.state.cast}/>
+           <MovieContent  loading = {this.state.contentLoading} movie = {this.state.movie} staring ={this.state.staring} directors = {this.state.directors}  screenwriters = {this.state.screenwriters}/>
+            <ScrollList  loading = {this.state.recLoading} title = "Similar Films" list = {this.state.recommended}/>
+            <CreditsTable loading = {this.state.creditsLoading} credits = {this.state.credits}/>
           </div>
       )
   }

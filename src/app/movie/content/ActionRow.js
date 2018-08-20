@@ -11,7 +11,8 @@ const Row = styled.div`
     justify-content:space-between;
     padding-top:1rem;
     align-self:center;
-    width:120px;
+    width:140px;
+    padding-bottom:.25rem;
 
 `
 
