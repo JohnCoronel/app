@@ -6,7 +6,6 @@ import "./scrollList.css"
 
 
 const renderList = ({list,loading}) => {
-    console.log(loading)
     if (loading)  { return (<Loader active = {loading}/>)} 
     else {
             return list.map(item => {
@@ -17,9 +16,8 @@ const renderList = ({list,loading}) => {
                 )
             })
         }   
-        }
+    }
 const ScrollList = (props) => {
-  
         return( 
             <div>
                  <h3 style = {{padding: '1rem 4rem'}}> {props.title} </h3>

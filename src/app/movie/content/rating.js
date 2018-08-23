@@ -22,6 +22,7 @@ const Genres = styled.div`
     Display:flex;
     justify-content:center;
     flex-wrap:wrap;
+   
 `
 const Genre = styled.h4`
     margin:0;

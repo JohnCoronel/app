@@ -21,10 +21,8 @@ const renderDate = date => {
 
 
 const moviePage = (props) => {
-    if (props.contentLoading) {
-        <Loader active = {props.contentLoading}/> 
-    }
-    else {
+  
+   
     return (
         <div className = "movie-content">
             <div className = "content-header">
@@ -37,26 +35,26 @@ const moviePage = (props) => {
 
 
             <div className = "primary-info">
-            <h4>
-                Director {props.directors.map(director => {
-                    return <span>{director.name }</span>
+            <div className = "content-field">
+               <div className = "content-key">Director</div>  {props.directors.map(director => {
+                    return <span className = "content-value">{director.name}</span>
                 })}
-            </h4>
+            </div>
 
-            <h4>
-                Screenplay {props.screenwriters.map(writer => {
-                    return <span> {writer.name}</span>
+            <div className = "content-field">
+            <div className = "content-key">Screenplay</div> {props.screenwriters.map(writer => {
+                    return <span className = "content-value"> {writer.name}</span>
                 })}
-            </h4>
+            </div>
 
-            <h4>
-                Staring {props.staring.map(actor => {
-                    return <span> {actor.name}</span>
+            <div className = "content-field">
+            <div className = "content-key">Staring</div> {props.staring.map(actor => {
+                    return <span className = "content-value"> {actor.name}</span>
                 })}
-            </h4>
-
-                <div>
-                    {props.movie.overview}
+            </div>
+                
+                <div className = "content-field overview">
+                <div className = "content-key ">Overview</div> {props.movie.overview}
                 </div>
 
 
@@ -73,6 +71,6 @@ const moviePage = (props) => {
             </div>
         </div>
     )}
-}
+
 
 export default moviePage;
