@@ -10,7 +10,7 @@ const Menu = styled.div `
     display:flex;
     flex-direction: column;
     justify-content:space-between;
-    z-index:5;
+    z-index:11;
     border-radius: 5px;
     right:.5rem;
     margin-top:1rem;

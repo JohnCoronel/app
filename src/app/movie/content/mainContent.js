@@ -1,9 +1,9 @@
 import React from 'react';
-import {Loader} from 'semantic-ui-react'
+import {Loader,Segment} from 'semantic-ui-react'
 import placeholder from './placeholder.svg'
 import Score from './rating'
-import styled from 'styled-components';
 import Rating from './review'
+import Slider from './slider'
 import StreamIcons from './streamIcons'
 import ProgressiveImage from 'react-progressive-image'
 import ActionRow from './ActionRow'
@@ -21,9 +21,11 @@ const renderDate = date => {
 
 
 const moviePage = (props) => {
-  
+
    
     return (
+        <Segment basic>
+            <Loader active = {props.loading} />
         <div className = "movie-content">
             <div className = "content-header">
                 <h2>{props.movie.title} <span className = "release-year"> ({renderDate(props.movie.release_date)}) </span></h2>
@@ -56,20 +58,18 @@ const moviePage = (props) => {
                 <div className = "content-field overview">
                 <div className = "content-key ">Overview</div> {props.movie.overview}
                 </div>
-
-
             </div>
-
-
-
                 <div className = "content-info">
-                    <Score score = {props.movie.vote_average} genres ={props.movie.genres}/>
+                    {/* <Score score = {props.movie.vote_average} genres ={props.movie.genres}/> */}
+                    <Slider/>
                     <StreamIcons/>
-                    <Rating auth = {props.auth} rating = {0} score = {()=> console.log('scored')} />
+                    
+                    {/* <Rating auth = {props.auth} rating = {0} score = {()=> console.log('scored')} /> */}
                    <ActionRow/>
                 </div> 
             </div>
         </div>
+    </Segment>
     )}
 
 

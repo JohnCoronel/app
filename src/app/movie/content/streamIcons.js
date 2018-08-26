@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Popup} from 'semantic-ui-react';
 import styled from 'styled-components';
 import NetflixIcon from '../../common/icons/netflix';
 import AmazonIcon from '../../common/icons/amazonIcon'

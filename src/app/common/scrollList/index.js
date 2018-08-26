@@ -1,30 +1,31 @@
 import React from 'react'; 
 import MovieCard from '../../common/movieCard';
-import {Loader} from 'semantic-ui-react'
+import {Loader,Segment} from 'semantic-ui-react'
 import "./scrollList.css"
 
 
 
-const renderList = ({list,loading}) => {
-    if (loading)  { return (<Loader active = {loading}/>)} 
-    else {
+const renderList = ({list}) => {
+
             return list.map(item => {
                 return (
                     <div key = {item.title} className = "scroll-item">
                         <MovieCard movie = {item} />
                     </div>
                 )
-            })
-        }   
+            })      
     }
 const ScrollList = (props) => {
         return( 
-            <div>
-                 <h3 style = {{padding: '1rem 4rem'}}> {props.title} </h3>
+            <Segment basic>
+            <Loader active = {props.loading}/>
+            <div className ="scroll-list-container">
+                 <h3> {props.title} </h3>
                 <div className = "scroll-list"> 
                     {renderList(props)}
                 </div>
              </div>
+             </Segment>
             )
     
 }

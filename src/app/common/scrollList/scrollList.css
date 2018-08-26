@@ -1,9 +1,14 @@
+.scroll-list-container {
+    max-width:1200px;
+    width:95%;
+    margin:auto;
+}
+
 .scroll-list{
     margin-top:2rem;
     margin-bottom:2rem;
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+    
+   
     display:flex;
     flex-wrap:nowrap;
     overflow-x:auto;

@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Label} from 'semantic-ui-react';
-import tagimg from './genre.svg'
-import GenreIcon from './GenreIcon'
+
 
 //TODO - Link genres to genre page
 

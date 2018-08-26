@@ -1,5 +1,5 @@
-import React from 'react';
-import {Tab} from 'semantic-ui-react';
+import React from 'react'; 
+import {Tab,Loader,Segment} from 'semantic-ui-react';
 import CastTable from './castPane'
 import CrewTable from './crewPane'
 
@@ -19,8 +19,12 @@ const CreditsTabs = (props) => {
             render: () => <Tab.Pane attached = {false}><CrewTable credits = {props.credits} /></Tab.Pane>
         }
     ]
+  
     return (
-    <Tab style = {style} menu = {{secondary:true, pointing:true}} panes = {Panes} /> 
+        <Segment basic>
+            <Loader active = {props.loading}/>
+            <Tab style = {style} menu = {{secondary:true, pointing:true}} panes = {Panes} /> 
+        </Segment>
     )
 }
 

@@ -4,7 +4,8 @@ import Header from '../common/header'
 import 'semantic-ui-css/semantic.min.css';
 import MovieContent from './content/mainContent';
 import './movie.css';
-import ScrollList from '../common/scrollList'
+// import ScrollList from '../common/stackList'
+import StackedList from '../common/stackList';
 
 
 
@@ -69,12 +70,14 @@ class MoviePage extends React.Component {
         .then(response => {
             response.json().then(data => {
                 this.setState({
-                    recommended:data.results,
+                    recommended:data.results.slice(0,10),
                     recLoading:false,
                 })
             })
         })
     }
+
+
 
     fetchCredits(id){
         this.setState({
@@ -88,8 +91,9 @@ class MoviePage extends React.Component {
                     credit.job === 'Director'
                 )
                  let writers = data.crew.filter( credit =>
-                    credit.job === 'Screenplay'
-                )
+                    credit.job === 'Screenplay' || credit.job === 'Writer'
+                ).slice(0,4)
+
                 this.setState({
                     credits:data,
                     creditsLoading:false,
@@ -99,6 +103,7 @@ class MoviePage extends React.Component {
 
                 })
             })
+            
         })
     }
 
@@ -106,9 +111,12 @@ class MoviePage extends React.Component {
       return (
           <div className = "movie-page">
           <Header/>
+          <div className = "movie-body">
            <MovieContent  loading = {this.state.contentLoading} movie = {this.state.movie} staring ={this.state.staring} directors = {this.state.directors}  screenwriters = {this.state.screenwriters}/>
-            <ScrollList  loading = {this.state.recLoading} title = "Similar Films" list = {this.state.recommended}/>
+           
+            <StackedList  loading = {this.state.recLoading} title = "Similar Films" list = {this.state.recommended}/>
             <CreditsTable loading = {this.state.creditsLoading} credits = {this.state.credits}/>
+          </div>
           </div>
       )
   }

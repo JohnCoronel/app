@@ -61,12 +61,6 @@ const Result = styled.div`
     }
     
 `
-
-
-const FilterIcon = styled.svg``
-
-const FilterMenu = styled.div``
-
 const query = "https://api.themoviedb.org/3/search/movie?api_key=f0d9f12b62cff10da32d3bcd8da1424f&language=en-US&page=1&include_adult=false&query="
 const posterthumb = "https://image.tmdb.org/t/p/w92"
 

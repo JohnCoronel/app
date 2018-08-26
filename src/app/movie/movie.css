@@ -1,5 +1,12 @@
 .movie-page{
     width:100%;
     max-width:1200px;
+    min-height:100vh;
     margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+.movie-body{
+    flex:1;
 }

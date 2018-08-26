@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from '../common/header'
 import ScrollList from '../common/scrollList'
+import StackList from '../common/stackList'
 import './home.css';
+import StackedList from '../common/stackList';
 
 
 
@@ -40,7 +42,7 @@ import './home.css';
                     ...this.state,
                     popular: {
                         loading:false,
-                        list:results.results
+                        list:results.results.slice(0,10)
                     }
                    
                 })
@@ -63,7 +65,7 @@ import './home.css';
                     ...this.state,
                     current:{
                         loading:false,
-                        list:response.results
+                        list:response.results.slice(0,8)
                     }
                 })
             })
@@ -74,8 +76,9 @@ import './home.css';
         return (
             <div className = "homepage">
                 <Header/>
-                <ScrollList title = 'Popular' list = {this.state.popular.list}/>
-                <ScrollList  title = 'Current Release' loading = {this.state.current.loading} list = {this.state.current.list}/>
+                <StackedList title = 'Popular' list = {this.state.popular.list}/>
+                <StackedList title = 'Current Releases' loading = {this.state.current.loading} list = {this.state.current.list}/>
+                {/* <ScrollList  title = 'Current Release' loading = {this.state.current.loading} list = {this.state.current.list}/> */}
             </div>
             )
         }
