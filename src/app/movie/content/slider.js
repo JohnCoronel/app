@@ -1,5 +1,5 @@
 import React from 'react'
-import {SingleSlider} from 'react-slider-kit'
+import {SingleSlider} from '../../common/slider'
 
 export default class Slider extends React.Component {
     constructor(props){
