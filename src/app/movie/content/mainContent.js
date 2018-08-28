@@ -2,12 +2,11 @@ import React from 'react';
 import {Loader,Segment} from 'semantic-ui-react'
 import placeholder from './placeholder.svg'
 import Score from './rating'
-import Rating from './review'
-import Slider from './slider'
 import StreamIcons from './streamIcons'
 import ProgressiveImage from 'react-progressive-image'
 import ActionRow from './ActionRow'
 import '../content/content.css';
+import Rate from '../../common/star'
 const imgUrl = "https://image.tmdb.org/t/p/w500/"
 
 
@@ -60,11 +59,9 @@ const moviePage = (props) => {
                 </div>
             </div>
                 <div className = "content-info">
-                    {/* <Score score = {props.movie.vote_average} genres ={props.movie.genres}/> */}
-                    <Slider/>
+                  <Score score = {props.movie.vote_average} genres ={props.movie.genres}/> 
                     <StreamIcons/>
-                    
-                    {/* <Rating auth = {props.auth} rating = {0} score = {()=> console.log('scored')} /> */}
+                    <Rate/>
                    <ActionRow/>
                 </div> 
             </div>

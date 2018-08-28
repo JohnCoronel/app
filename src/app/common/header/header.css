@@ -9,11 +9,13 @@
 }
 
 .nav {
+    margin-top:1rem;
     padding-left:1rem;
     display:flex;
     justify-content: flex-end;
     width:75%;
 }
+
 
 .nav-header h1 {
     font-family: 'Righteous';

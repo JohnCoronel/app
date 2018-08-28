@@ -1,4 +1,4 @@
 # Movie Project SPA
 
-Built with react & react router, using TMDB api
+Built with React and Redux, using TMDB api
 quetzalcoatl.co
