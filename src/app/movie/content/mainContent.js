@@ -55,12 +55,12 @@ const moviePage = (props) => {
             </div>
                 
                 <div className = "content-field overview">
-                <div className = "content-key ">Overview</div> {props.movie.overview}
+                <div className = "content-key ">Overview</div> <p>{props.movie.overview}</p>
                 </div>
             </div>
                 <div className = "content-info">
                   <Score score = {props.movie.vote_average} genres ={props.movie.genres}/> 
-                    <StreamIcons/>
+                    
                     <Rate/>
                    <ActionRow/>
                 </div> 

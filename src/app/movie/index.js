@@ -38,6 +38,7 @@ class MoviePage extends React.Component {
     componentWillReceiveProps(nextProps) {
         if (this.props.location.pathname !== nextProps.location.pathname){
             const movieId = nextProps.match.params.id;
+            window.scrollTo(0,0)
             this.fetchMovie(movieId)
             this.fetchCredits(movieId)
             this.fetchRecommendations(movieId)

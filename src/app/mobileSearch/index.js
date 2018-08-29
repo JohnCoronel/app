@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import {withRouter} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {toggleBlur,toggleFocus} from '../actions/inputFocus'
 
 const SearchContainer = styled.div`
 display:flex;
@@ -113,11 +115,8 @@ class MobileSearch extends React.Component {
                    { searchResults.map((item,i) => {
                        return <Result onClick = {() => this.handleRedirect(item.id)}key = {i}> <img alt = "poster" src = {posterthumb+item.poster_path}/> {item.title}</Result>
                    })
-
-
                    }
-
-                </Results>
+                    </Results>
                 )
             }
 
@@ -128,7 +127,7 @@ class MobileSearch extends React.Component {
             <SearchContainer>
                 <SearchHeader>
                      <Header> Quetzalcoatl </Header>
-                     <SearchInput type = "text" name = "searchQuery" placeholder = "Search.." value = {this.state.searchQuery} onChange = {this.handleChange}/>
+                     <SearchInput active = {this.props.focusState} onFocus = {this.props.focus} onBlur = {this.props.blur} type = "text" name = "searchQuery" placeholder = "Search.." value = {this.state.searchQuery} onChange = {this.handleChange}/>
                 </SearchHeader>
                 {this.renderResults()}
             </SearchContainer>
@@ -137,4 +136,15 @@ class MobileSearch extends React.Component {
     }
 }
 
-export default withRouter(MobileSearch);
+const mapDispatchToProps = {
+    focus: () => toggleFocus(),
+    blur: () => toggleBlur()
+}
+
+const mapStateToProps = state => {
+    return {
+        focusState: state.navFooter.focus
+    }
+}
+
+export default withRouter(connect(null,mapDispatchToProps)(MobileSearch));

@@ -11,7 +11,7 @@ const custom = {
 }
 const UserRating = () => {
     return (
-        <div style ={{alignSelf:'center', width:'150px'}}>
+        <div style ={{alignSelf:'center', width:'150px',marginTop:'auto'}}>
         <Rate style = {custom} allowHalf/>
         </div>
     )

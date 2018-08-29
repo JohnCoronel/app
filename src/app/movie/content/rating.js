@@ -14,7 +14,7 @@ const Score = styled.div`
     line-height:75px;
     font-family: sans-serif;
     border-radius:50%;
-    border:3px solid black;
+    border:3px solid rgba(0, 0, 0, 0.85);
 `
 const Genres = styled.div`
     padding-bottom:5px;
