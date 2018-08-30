@@ -50,6 +50,8 @@ export default class StackedList extends Component {
     render(){
         const styles = this.getItemStyles(this.props.list.length)
            return (
+               <Segment basic>
+                <Loader active = {this.props.active}/>
                <div style = {{width:'95%',margin:'auto'}}>
                    <div style = {{display:'flex',margin:'1rem'}}>
                        <h3 style = {{display:'inline-block',margin:'0px'}}>{this.props.title} </h3>
@@ -57,7 +59,8 @@ export default class StackedList extends Component {
                             <ExpandIcon stacked = {this.state.stacked}/>
                          </span>
                    </div>
-               <div ref = {this.listRef} style = {{position:'relative',display:'flex',overflow:'auto'}}>
+               <div ref = {this.listRef} style = {{position:'relative',display:'flex',overflow:'auto',overflowScrolling: "touch",
+WebkitOverflowScrolling: "touch"}}>
                { 
                 this.props.list.map((item,i) => {
                     return <StackItem key = {i} styles = {styles[i]} item = {item} stacked = {this.state.stacked}/>
@@ -65,6 +68,7 @@ export default class StackedList extends Component {
                 }
                 </div>
             </div>
+        </Segment>
                )
           }
 

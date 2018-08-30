@@ -114,7 +114,6 @@ class MoviePage extends React.Component {
           <Header/>
           <div className = "movie-body">
            <MovieContent  loading = {this.state.contentLoading} movie = {this.state.movie} staring ={this.state.staring} directors = {this.state.directors}  screenwriters = {this.state.screenwriters}/>
-           
             <StackedList  loading = {this.state.recLoading} title = "Similar Films" list = {this.state.recommended}/>
             <CreditsTable loading = {this.state.creditsLoading} credits = {this.state.credits}/>
           </div>
